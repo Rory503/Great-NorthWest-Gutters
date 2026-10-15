@@ -1,0 +1,17 @@
+{
+  "name": "great-northwest-gutters",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "1.0.0",
+    "pdfjs-dist": "6.3.289",
+    "tesseract.js": "7.0.0"
+  },
+  "engines": { "node": ">=22.13" }
+}

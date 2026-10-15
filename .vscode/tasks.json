@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Start Great Northwest Gutters",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"start"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Preview Great Northwest Gutters",
+			"type": "shell",
+			"command": "$env:PORT='4317'; npm start",
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

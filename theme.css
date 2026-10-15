@@ -1,0 +1,527 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f2eb;
+  --sidebar: #24372d;
+  --panel: #fffefa;
+  --panel-light: #f8f6ef;
+  --border: #dfddd3;
+  --text: #29322c;
+  --muted: #727b72;
+  --accent: #426b50;
+  --amber: #a86d24;
+  --blue: #4d7183;
+  --purple: #68785f;
+  --red: #b3544b;
+  --cyan-soft: #426b5014;
+  --violet-soft: #68785f14;
+}
+
+body,
+.workspace {
+  background: var(--bg);
+}
+
+.sidebar {
+  color: #f3f3eb;
+  background: var(--sidebar);
+  border-color: #34493c;
+}
+
+.live-dot,
+.notification-btn > span {
+  color: #a8c5a1;
+  background-color: #a8c5a1;
+}
+
+.brand small,
+.workspace-label,
+.workspace-label span,
+.profile small {
+  color: #bdc9bd;
+}
+
+.workspace-label span,
+.search-hint,
+.demo-side,
+.profile {
+  border-color: #43574a;
+}
+
+.nav-item {
+  color: #d2dbd2;
+}
+
+.nav-item:hover,
+.icon-btn:hover {
+  color: #fffefa;
+  background: #33483a;
+}
+
+.nav-item.active {
+  color: #fffefa;
+  background: #3a5643;
+  box-shadow: inset 3px 0 0 #a8c5a1, inset 0 0 0 1px #54725c;
+}
+
+.nav-count,
+.demo-side {
+  color: #e0e8dc;
+  background: #304437;
+}
+
+.demo-side p {
+  color: #c1cec0;
+}
+
+.topbar,
+.chart-footer,
+.quality-bottom,
+.crew-metrics,
+.crew-metrics > div,
+.crew-card-bottom,
+.alert-row,
+.panel-bottom-link,
+.estimator-row,
+.page-footer,
+.comparison-row,
+.detail-section,
+.detail-section .feedback-item,
+.movement-row,
+.estimator-card-footer,
+.feedback-item {
+  border-color: var(--border);
+}
+
+.breadcrumb,
+.global-search,
+.toolbar-date,
+.stat-top,
+.chart-key,
+.quality-ring span,
+.quality-legend > div,
+.quality-bottom,
+.crew-person p,
+.crew-person p span,
+.crew-metrics span,
+.crew-card-bottom,
+.section-head p,
+.alert-row p,
+.panel-footnote,
+.estimator-row small,
+.page-footer,
+.rank {
+  color: var(--muted);
+}
+
+.breadcrumb .icon,
+.toolbar-date > .icon {
+  color: #8c968b;
+}
+
+.breadcrumb strong,
+.stat-value,
+.crew-person h3,
+.section-head h2,
+.alert-row strong,
+.quality-bottom strong,
+.estimator-row strong,
+.page-heading h1,
+.detail-dialog,
+.form-dialog,
+.scan-dialog {
+  color: var(--text);
+}
+
+.primary-btn {
+  color: #fffefa;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 3px 12px #426b5020;
+}
+
+.primary-btn:hover {
+  color: #fffefa;
+  background: #34583f;
+  border-color: #34583f;
+}
+
+.secondary-btn,
+.period-select,
+.filter-select {
+  color: var(--text);
+  background: #fffefa;
+  border-color: var(--border);
+}
+
+.secondary-btn:hover,
+.period-select:hover,
+.filter-select:hover {
+  background: #f0eee6;
+  border-color: #bdc8b8;
+}
+
+.heading-action [data-action="scan"] {
+  color: var(--accent);
+  background: #edf2e9;
+  border-color: #c5d2bf;
+}
+
+.heading-action [data-action="scan"]:hover {
+  background: #e2eadc;
+  border-color: var(--accent);
+}
+
+.demo-pill {
+  color: #4d674f;
+  background: #edf2e9;
+  border-color: #cbd7c5;
+}
+
+select,
+.global-search input {
+  color: var(--text);
+}
+
+option {
+  color: var(--text);
+  background: #fffefa;
+}
+
+.global-search input::placeholder,
+.search-hint {
+  color: #858d82;
+}
+
+.top-avatar {
+  color: #35543c;
+  background: #e6eee2;
+  border-color: #c1d0ba;
+}
+
+.stat-card,
+.panel,
+.crew-card,
+.estimator-card,
+.inventory-item {
+  background: var(--panel);
+  border-color: var(--border);
+  box-shadow: 0 3px 12px #29322c0a;
+}
+
+.stat-card:nth-child(even),
+.quality-panel,
+.estimator-card {
+  border-top-color: #a9b99f;
+}
+
+.stat-icon {
+  background: #f0f2eb;
+  border-color: #e1e5dc;
+}
+
+.stat-denominator,
+.quality-bottom strong span,
+.quality-legend strong,
+.detail-kpis small,
+.detail-kpis strong > span,
+.detail-period {
+  color: var(--muted);
+}
+
+.chart-footer {
+  background: #faf9f4;
+}
+
+.crew-card {
+  --crew-accent: var(--accent);
+}
+
+.crew-card:hover,
+.estimator-card:hover {
+  background: #f8f7f1;
+  border-color: #9eaf98;
+  box-shadow: 0 7px 20px #29322c12;
+}
+
+.truck-label {
+  color: #5c675e;
+}
+
+.crew-metrics,
+.crew-metrics > div {
+  border-color: #e6e4dc;
+}
+
+.crew-metrics > div:nth-child(2) strong,
+.quality-ring strong,
+.detail-kpis strong {
+  color: var(--text);
+}
+
+.crew-card-bottom {
+  background: #faf9f4;
+}
+
+.badge.green {
+  color: #355d40;
+  background: #e9f1e7;
+  border-color: #c7d9c3;
+}
+
+.badge.blue {
+  color: #3f6477;
+  background: #eaf0f2;
+  border-color: #cad9dd;
+}
+
+.badge.amber {
+  color: #81591e;
+  background: #f6efdf;
+  border-color: #e5d4b0;
+}
+
+.badge.neutral {
+  color: #626b61;
+  background: #eeeee8;
+  border-color: #d9dbd1;
+}
+
+.text-link,
+.panel-bottom-link,
+.plain-link .icon,
+.stock-caption button,
+.detail-kpis > div:first-child strong {
+  color: var(--accent);
+}
+
+.panel-bottom-link:hover,
+.estimator-row:hover,
+tbody tr:hover {
+  background: #f5f6f0;
+}
+
+.info-strip {
+  color: #435247;
+  background: #edf2e9;
+  border-color: #cbd8c5;
+  border-left-color: var(--accent);
+}
+
+.info-strip > .icon,
+.info-strip strong {
+  color: #355d40;
+}
+
+.info-strip span {
+  color: #56645a;
+}
+
+.bar-track,
+.stock-track {
+  background: #e9e8df;
+}
+
+.inventory-item {
+  background: #faf9f4;
+}
+
+th {
+  color: #526253;
+  background: #f0f1e9;
+}
+
+td {
+  color: #424b43;
+  border-color: var(--border);
+}
+
+td strong {
+  color: var(--text);
+}
+
+.movement-icon {
+  color: var(--accent);
+  background: #eaf0e7;
+}
+
+.estimator-card-person > .icon {
+  color: var(--accent);
+}
+
+dialog {
+  color: var(--text);
+  background: var(--panel);
+  border-color: var(--border);
+  box-shadow: 0 20px 70px #29322c26;
+}
+
+dialog::backdrop {
+  background: #20282080;
+}
+
+.detail-hero p,
+.detail-job-heading p,
+.crew-roster small,
+.detail-kpis small,
+.detail-kpis strong > span,
+.detail-period,
+.workorder-grid small,
+.form-header p,
+.form-field > span,
+.form-info,
+.form-footer > span,
+.help-content p {
+  color: var(--muted);
+}
+
+.crew-roster,
+.form-header,
+.form-footer,
+.form-header,
+.detail-section {
+  border-color: var(--border);
+}
+
+.workorder-grid {
+  background: #f1f3eb;
+  border-color: #d9dfd3;
+}
+
+.job-notes {
+  color: #46544a;
+  background: #f1f4ed;
+  border-left-color: #8da487;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea,
+.scan-raw-text textarea {
+  color: var(--text);
+  background: #fffefa;
+  border-color: #d5d7cc;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--accent);
+}
+
+.form-error:not(:empty),
+.error-banner {
+  color: #813f35;
+  background: #fbefeb;
+  border-color: #e9c7bd;
+}
+
+#toast {
+  color: #f8fbf5;
+  background: #355b40;
+  border-color: #52785a;
+  box-shadow: 0 10px 30px #29322c26;
+}
+
+.scan-intro {
+  background: radial-gradient(ellipse at 95% 50%, #426b5012, transparent 60%), var(--panel);
+  border-top-color: var(--accent);
+}
+
+.scan-privacy,
+.scan-steps > div > span,
+.scan-steps > div > span,
+.suggested-field > span,
+.scan-raw-text summary {
+  color: var(--accent);
+}
+
+.scan-dropzone {
+  color: var(--text);
+  background: #f8f8f2;
+  border-color: #a7b99f;
+}
+
+.scan-dropzone:hover,
+.scan-dropzone.dragging {
+  background: #edf2e9;
+  border-color: var(--accent);
+}
+
+.scan-upload-icon {
+  color: var(--accent);
+  background: #e9f0e5;
+  border-color: #c6d5c0;
+  box-shadow: none;
+}
+
+.scan-local-note,
+.scan-intro-copy > p,
+.scan-progress p,
+.scan-raw-text {
+  color: #657066;
+}
+
+.scan-progress {
+  background: #f1f4ed;
+  border-color: #d5dfd0;
+}
+
+.scan-spinner {
+  border-color: #d5dfd0;
+  border-top-color: var(--accent);
+}
+
+.scan-source-pane {
+  background: #f3f2eb;
+}
+
+.scan-source-image {
+  background: #ebeae2;
+  border-color: #d4d4ca;
+}
+
+.scan-source-toolbar,
+.scan-source-toolbar > span,
+.scan-source-pane > p {
+  color: #657066;
+}
+
+.scan-review-warning {
+  color: #765521;
+  background: #f7f1e3;
+  border-color: #e8d9b8;
+}
+
+.suggested-field input,
+.suggested-field select {
+  border-color: #9bb39a;
+}
+
+.review-confirm {
+  color: #405847;
+  background: #edf3eb;
+  border-color: #c8d8c4;
+}
+
+.review-confirm > input {
+  accent-color: var(--accent);
+}
+
+.scan-raw-text {
+  border-color: var(--border);
+}
+
+.paper-tag {
+  color: #35543c;
+  background: #e6eee2;
+  border-color: #c1d0ba;
+  box-shadow: 0 5px 15px #29322c12;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline-color: #426b50;
+}
