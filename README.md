@@ -13,11 +13,24 @@ npm install
 npm start
 ```
 
-Open http://localhost:3000. The local server binds to loopback only. To choose another port, set the `PORT` environment variable.
+Open http://localhost:3000. The server binds to `0.0.0.0` so hosting platforms can reach it. To restrict access to this computer, set `HOST=127.0.0.1`. To choose another port, set the `PORT` environment variable.
 
 ```text
 npm test
 ```
+
+## Deploy to Railway
+
+- Connect this GitHub repository to a Railway service.
+- Use Node.js 22.13 or newer (Node.js 24 recommended).
+- Install dependencies with `npm ci --omit=dev` and start with `npm start`. No build step is required.
+- Leave `HOST` unset (defaults to `0.0.0.0`) or explicitly set it to `0.0.0.0`. The app uses Railway's `PORT` environment variable.
+- In the service's **Settings > Networking > Public Networking**, select **Generate Domain**. If a target port is requested, use the port the app reports in its startup log.
+- Open the generated HTTPS domain, not the `localhost` address. A successful GitHub push publishes source code; Railway must also finish deploying it.
+
+`npm warn config production Use --omit=dev instead` is an npm configuration warning, not by itself a deployment failure. If you configured `NPM_CONFIG_PRODUCTION`, remove that deprecated setting and use `--omit=dev` in your install command instead. If deployment still fails, check the subsequent build/runtime logs.
+
+Public hosting does not add staff accounts or shared storage. This remains a browser-local demo; do not enter sensitive customer information.
 
 ## Included
 

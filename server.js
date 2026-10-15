@@ -13,6 +13,7 @@ const vendorRoots = {
   pdfjs: resolve(root, 'node_modules', 'pdfjs-dist'),
 };
 const port = Number(process.env.PORT || 3000);
+const host = process.env.HOST || '0.0.0.0';
 const server = http.createServer(async (req, res) => {
   try {
     const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
@@ -45,4 +46,4 @@ server.on('error', error => {
   console.error(error.code === 'EADDRINUSE' ? `Port ${port} is already in use. Set PORT to an available port and try again.` : `Server failed: ${error.message}`);
   process.exitCode = 1;
 });
-server.listen(port, '127.0.0.1', () => console.log(`Great Northwest Gutters: http://localhost:${port}`));
+server.listen(port, host, () => console.log(`Great Northwest Gutters: listening on http://${host}:${server.address().port}`));
